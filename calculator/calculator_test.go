@@ -16,10 +16,10 @@ type TestCase struct {
 func TestCalculateIsArmstrong(t *testing.T) {
 	t.Run("test for all 3 digit armstrong numbers", func(t *testing.T) {
 		tests := []TestCase{
-			TestCase{name: "Testing value for: 153", value: 153, expected: true},
-			TestCase{name: "Testing value for: 370", value: 370, expected: true},
-			TestCase{name: "Testing value for: 371", value: 371, expected: true},
-			TestCase{name: "Testing value for: 407", value: 407, expected: true},
+			{name: "Testing value for: 153", value: 153, expected: true},
+			{name: "Testing value for: 370", value: 370, expected: true},
+			{name: "Testing value for: 371", value: 371, expected: true},
+			{name: "Testing value for: 407", value: 407, expected: true},
 		}
 
 		for _, test := range tests {

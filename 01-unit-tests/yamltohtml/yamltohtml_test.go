@@ -1,3 +1,5 @@
+// +build unit
+
 package yamltohtml_test
 
 import (
@@ -23,12 +25,12 @@ func TestMain(m *testing.M) {
 
 func TestYamlToHTML(t *testing.T) {
 	testCases := []TestCase{
-		{
+		TestCase{
 			desc:     "Test Case 1",
 			path:     "testdata/test_01.yml",
 			expected: "<html><head><title>My Awesome Page</title></head><body>This is my awesome content</body></html>",
 		},
-		{
+		TestCase{
 			desc:     "Test Case 2",
 			path:     "testdata/test_02.yml",
 			expected: "<html><head><title>My Second Page</title></head><body>This is my awesome content</body></html>",

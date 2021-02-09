@@ -1,3 +1,5 @@
+// +build unit
+
 package calculator_test
 
 import (
@@ -62,7 +64,7 @@ func TestNegativeCalculateIsArmstrong(t *testing.T) {
 
 func benchmarkCalculateIsArmstrong(input int, b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		calculator.CalculateIsArmstrong(370)
+		calculator.CalculateIsArmstrong(input)
 	}
 }
 

@@ -1,10 +1,11 @@
-package service_test
+// +build integration
+
+package main
 
 import (
 	"fmt"
 	"testing"
 
-	"github.com/TutorialEdge/go-testing-bible/service"
 	"github.com/stretchr/testify/mock"
 )
 
@@ -44,7 +45,7 @@ func TestChargeCustomer(t *testing.T) {
 	smsService.On("SendChargeNotification", 100).Return(true)
 
 	// next we want to define the service we wish to test
-	myService := service.MyService{smsService}
+	myService := MyService{smsService}
 	// and call said method
 	myService.ChargeCustomer(100)
 
